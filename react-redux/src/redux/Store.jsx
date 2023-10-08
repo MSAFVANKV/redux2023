@@ -1,7 +1,8 @@
 import { createStore } from "redux"
 
 const initialState ={
-    value : 0
+    value : 0,
+    showLebal:false,
 }
 
 function appReducer(prevState = initialState, action) {
@@ -18,8 +19,13 @@ function appReducer(prevState = initialState, action) {
                 return {
                     ...prevState,
                     value: prevState.value-1
+                };
+                case 'show-lebal':
+            
+                return {
+                    ...prevState,
+                    showLebal: action.payload
                 }    
-           
     
         default:
             return prevState
