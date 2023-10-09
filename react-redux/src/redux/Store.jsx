@@ -1,4 +1,6 @@
-import { createStore } from "redux"
+import { applyMiddleware,combineReducers, createStore } from "redux"
+// import testMiddleware from "./Middlewares/testMiddleware"; if we use redux-logger dont need write testMiddleware!!!
+import {logger} from 'redux-logger'
 
 const initialState ={
     value : 0,
@@ -33,6 +35,6 @@ function appReducer(prevState = initialState, action) {
 
 }
 
-const store = createStore(appReducer)
+const store = createStore(appReducer, applyMiddleware(logger))
 
 export default store

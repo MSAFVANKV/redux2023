@@ -25,6 +25,11 @@ function navbar() {
             name: 'LEBAL',
             path: '/lebel'
         },
+        {
+            id: 4,
+            name: 'TEST',
+            path: '/test'
+        },
     ];
 
     return (
